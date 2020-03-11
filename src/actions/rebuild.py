@@ -232,7 +232,7 @@ def main():
             shutil.rmtree(confdir)
 
     else:
-        message.sub_debug('Kernel Compression', "gzip with early microcode")
+        message.sub_debug('Kernel Compression', "not zipped with early microcode")
         try:
             misc.chroot_exec('unmkinitramfs ' + initrd.replace(config.FILESYSTEM_DIR, '') + ' conf/', \
                 shell=True, cwd=config.FILESYSTEM_DIR)
